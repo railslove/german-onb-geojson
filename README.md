@@ -1,4 +1,4 @@
-# German "Orstnetzbereiche" as geojson
+# German "Ortsnetzbereiche" as geojson
 
 Data from [Bundesnetzagentur "Orts­netz­be­rei­che, Orts­netz­kenn­zah­len und Orts­netz­be­reichs­gren­zen"](https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONRufnr/ON_Einteilung_ONB/ON_ONB_ONKz_ONBGrenzen_Basepage.html), but as geojson instead of ArcView shapefiles.
 
