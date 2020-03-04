@@ -25,9 +25,7 @@ blocks:
         - name: 'Check and Update'
           commands:
             - sem-version node 12
-            - sudo add-apt-repository ppa:ubuntugis/ppa
-            - sudo apt-get update
-            - sudo apt-get install gdal-bin
+            - sudo apt install -y gdal-bin
             - checkout
             - chmod 600 ~/.ssh/german_onb_geojson_deploy_rsa
             - ssh-add ~/.ssh/german_onb_geojson_deploy_rsa
