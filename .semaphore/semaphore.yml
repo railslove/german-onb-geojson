@@ -1,0 +1,36 @@
+version: v1.0
+name: german-onb-geojson
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+execution_time_limit:
+  minutes: 15
+
+blocks:
+  - name: 'Check and Update'
+    task:
+      env_vars:
+        - name: GIT_AUTHOR_NAME
+          value: 'Timo Mämecke'
+        - name: GIT_AUTHOR_EMAIL
+          value: 'timo@railslove.com'
+        - name: GIT_COMMITTER_NAME
+          value: 'Timo Mämecke'
+        - name: GIT_COMMITTER_EMAIL
+          value: 'timo@railslove.com'
+      secrets:
+        - name: german-onb-geojson-secrets
+      jobs:
+        - name: 'Check and Update'
+          commands:
+            - sem-version node 12
+            - sudo add-apt-repository ppa:ubuntugis/ppa
+            - sudo apt-get update
+            - sudo apt-get install gdal-bin
+            - checkout
+            - chmod 600 ~/.ssh/german_onb_geojson_deploy_rsa
+            - ssh-add ~/.ssh/german_onb_geojson_deploy_rsa
+            - npm ci
+            - npm run check-update
+            - git push
