@@ -1,2 +1,4 @@
 raw/
 convert.sh
+.tmp/
+check-update.js

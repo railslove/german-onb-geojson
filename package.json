@@ -5,7 +5,8 @@
   "main": "ong.geojson",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "convert": "./convert.sh"
+    "convert": "./convert.sh",
+    "check-update": "node check-update.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,15 @@
   "bugs": {
     "url": "https://github.com/railslove/german-onb-geojson/issues"
   },
-  "homepage": "https://github.com/railslove/german-onb-geojson#readme"
+  "homepage": "https://github.com/railslove/german-onb-geojson#readme",
+  "devDependencies": {
+    "anzip": "^0.2.0",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "np": "^6.2.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
 }
