@@ -11,11 +11,11 @@ blocks:
     task:
       env_vars:
         - name: GIT_AUTHOR_NAME
-          value: Timo Mämecke
+          value: Timo Mämecke (Bot)
         - name: GIT_AUTHOR_EMAIL
           value: timo@railslove.com
         - name: GIT_COMMITTER_NAME
-          value: Timo Mämecke
+          value: Timo Mämecke (Bot)
         - name: GIT_COMMITTER_EMAIL
           value: timo@railslove.com
       secrets:
