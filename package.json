@@ -1,6 +1,6 @@
 {
   "name": "german-onb-geojson",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "german \"Ortsnetzbereiche\" as geojson",
   "main": "ong.geojson",
   "scripts": {
