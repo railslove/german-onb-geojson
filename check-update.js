@@ -9,7 +9,7 @@ const baseUrl = 'https://www.bundesnetzagentur.de'
 const siteUrl =
   baseUrl +
   '/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONRufnr/ON_Einteilung_ONB/ON_ONB_ONKz_ONBGrenzen_Basepage.html'
-const hrefRegex = /ONBGrenzen\/ONB.*\.zip/i
+const hrefRegex = /ONBGrenzen\/.*\.zip/i
 const tmpDir = path.resolve(__dirname, '.tmp')
 const tmpPath = path.resolve(tmpDir, 'download.zip')
 const rawPath = path.resolve(__dirname, 'raw')
@@ -67,7 +67,7 @@ async function getDownloadUrl() {
   const $ = cheerio.load(result.data)
 
   let downloadUrl, releaseDate
-  $('a[href]').each(function() {
+  $('a[href]').each(function () {
     const href = $(this).attr('href')
     if (hrefRegex.test(href)) {
       downloadUrl = baseUrl + href
@@ -75,7 +75,7 @@ async function getDownloadUrl() {
         .text()
         .match(/Stand: ([\d|\.]+)/i)[1]
         .split('.')
-        .map(i => +i)
+        .map((i) => +i)
       releaseDate = new Date(year, month - 1, day, 12)
     }
   })
@@ -95,7 +95,7 @@ async function downloadFileToTmp(url) {
   const download = await axios({
     url,
     method: 'GET',
-    responseType: 'stream'
+    responseType: 'stream',
   })
 
   download.data.pipe(writer)
