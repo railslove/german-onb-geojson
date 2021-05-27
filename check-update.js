@@ -8,7 +8,7 @@ const anzip = require('anzip')
 const baseUrl = 'https://www.bundesnetzagentur.de'
 const siteUrl =
   baseUrl +
-  '/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONRufnr/ON_Einteilung_ONB/ON_ONB_ONKz_ONBGrenzen_Basepage.html'
+  '/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/1ONB-Grenzen-2021.html'
 const hrefRegex = /ONBGrenzen\/.*\.zip/i
 const tmpDir = path.resolve(__dirname, '.tmp')
 const tmpPath = path.resolve(tmpDir, 'download.zip')
