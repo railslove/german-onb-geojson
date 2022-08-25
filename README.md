@@ -45,10 +45,14 @@ npm run check-update
 npm run release
 ```
 
+## Author
+
+[Timo Mämecke](https://github.com/timomeh)
+
 ## License
 
 [MIT](./license)
 
 ---
 
-<p align="center">with 💚 from Railslove</p>
+<p align="center">with 💚 by Railslove</p>
