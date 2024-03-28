@@ -8,8 +8,8 @@ const anzip = require('anzip')
 const baseUrl = 'https://www.bundesnetzagentur.de'
 const siteUrl =
   baseUrl +
-  '/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/1ONB-Grenzen-2021.html'
-const hrefRegex = /ONBGrenzen\/.*\.zip/i
+  '/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/1onbgrenzen_zip.html'
+const hrefRegex = /Grenz.*\.zip$/i
 const tmpDir = path.resolve(__dirname, '.tmp')
 const tmpPath = path.resolve(tmpDir, 'download.zip')
 const rawPath = path.resolve(__dirname, 'raw')
@@ -70,7 +70,7 @@ async function getDownloadUrl() {
   $('a[href]').each(function () {
     const href = $(this).attr('href')
     if (hrefRegex.test(href)) {
-      downloadUrl = baseUrl + href
+      downloadUrl = href.startsWith('https://') ? href : baseUrl + href
       const [day, month, year] = $(this)
         .text()
         .match(/Stand: ([\d|\.]+)/i)[1]
