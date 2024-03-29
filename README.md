@@ -1,6 +1,6 @@
 # German "Ortsnetzbereiche" as geojson
 
-Data from [Bundesnetzagentur "Orts­netz­be­rei­che, Orts­netz­kenn­zah­len und Orts­netz­be­reichs­gren­zen"](https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/1ONB-Grenzen-2021.html), but as geojson instead of ArcView shapefiles.
+Data from [Bundesnetzagentur "Orts­netz­be­rei­che, Orts­netz­kenn­zah­len und Orts­netz­be­reichs­gren­zen"](https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/1onbgrenzen_zip.html), but as geojson instead of ArcView shapefiles.
 
 Contains shapes of all local network areas (german: Ortsnetzbereiche) with their
 respective area codes (german: Vorwahl).
